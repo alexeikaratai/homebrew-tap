@@ -1,6 +1,6 @@
 cask "smartdock" do
-  version "1.4.0"
-  sha256 "c89ae2ef8af24efd2cf144f3c2d80f5fe96f1df4ca6a341661aa6807bbe6f3e1"
+  version "1.4.1"
+  sha256 "f0243f3c848c10a52f853848f82fb233a9b5a14550fb32c641e0597e399b170d"
 
   url "https://github.com/alexeikaratai/smartdock/releases/download/v#{version}/SmartDock-#{version}.zip"
   name "SmartDock"
