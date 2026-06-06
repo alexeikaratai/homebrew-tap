@@ -2,7 +2,7 @@ class Smartdock < Formula
   desc "Automatically switch Dock settings when external monitor connects"
   homepage "https://github.com/alexeikaratai/smartdock"
   url "https://github.com/alexeikaratai/smartdock/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "7b6b793755f36e1b268f3c54e31dabc3a55e1040058e31d68825fe69e816ad24"
+  sha256 "0030459cc72f963e38c2fc4262c1fbb873ecf4a553fd00024e08779cacbeb880"
   license :cannot_represent
 
   depends_on :macos
