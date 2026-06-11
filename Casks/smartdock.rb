@@ -7,7 +7,7 @@ cask "smartdock" do
   desc "Automatically switch Dock settings when external monitor connects"
   homepage "https://github.com/alexeikaratai/smartdock"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "SmartDock.app"
 
