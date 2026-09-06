@@ -11,19 +11,21 @@ cask "smartdock" do
 
   app "SmartDock.app"
 
-  postflight do
-    # Remove quarantine so unsigned app opens without Gatekeeper warnings
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/SmartDock.app"]
-
-    ohai "SmartDock needs Accessibility permission to control the Dock."
-    ohai "Grant it in: System Settings → Privacy & Security → Accessibility"
+  # Drop only the quarantine flag so the ad-hoc signed app opens without a
+  # Gatekeeper warning. Not `-cr`: that clears every extended attribute in the
+  # bundle, including ones Homebrew and Finder rely on.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/SmartDock.app"]
   end
 
   uninstall quit: "com.smartdock.app"
 
   zap trash: [
-    "~/Library/Preferences/com.smartdock.app.plist",
     "~/Library/Caches/com.smartdock.app",
+    "~/Library/Preferences/com.smartdock.app.plist",
   ]
+
+  caveats do
+    unsigned_accessibility
+  end
 end
