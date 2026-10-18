@@ -1,8 +1,8 @@
 class Smarttype < Formula
   desc "Fix text typed in the wrong keyboard layout and translate selections"
   homepage "https://github.com/alexeikaratai/smarttype"
-  url "https://github.com/alexeikaratai/smarttype/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "8ac7caa0e7ab84ed4c37b1c3f41d64d00ac67eefafb69d2eef4b95b10b6c9092"
+  url "https://github.com/alexeikaratai/smarttype/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "c7885a851cc299fcbf23ff69e116ec1ab37cbdc1c62a8143cd20410627c2c2f9"
   license "MIT"
 
   # macOS 26's SDK, for Liquid Glass and the translation API; Xcode's xcstringstool,
