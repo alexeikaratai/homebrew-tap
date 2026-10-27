@@ -8,6 +8,14 @@ cask "smartdock" do
   homepage "https://github.com/alexeikaratai/smartdock"
 
   depends_on macos: :sonoma
+  # The zip carries one architecture. `release.yml` builds on a macos-26 runner, which
+  # is arm64, and `lipo -archs` on the shipped binary reports arm64 alone — so on an
+  # Intel Mac this cask used to install happily and produce an app that would not open.
+  # Homebrew refuses the install instead now, and says why.
+  #
+  # The **formula** has no such line on purpose: it runs `swift build` from source and
+  # produces a native binary wherever it is run, Intel included.
+  depends_on arch: :arm64
 
   app "SmartDock.app"
 
