@@ -1,8 +1,8 @@
 class Smartdock < Formula
   desc "Automatically switch Dock settings when external monitor connects"
   homepage "https://github.com/alexeikaratai/smartdock"
-  url "https://github.com/alexeikaratai/smartdock/archive/refs/tags/v3.0.1.tar.gz"
-  sha256 "acef51c19998435357b6d859dce73c450c2afccfd5d2088ffad865f84dc66956"
+  url "https://github.com/alexeikaratai/smartdock/archive/refs/tags/v3.0.2.tar.gz"
+  sha256 "859d635d3f3bc78d8619346609b8c97c274e0d6dc23b343a61bf7fc04795775b"
   license "MIT"
 
   # Xcode 26, not 16: the package declares `swift-tools-version: 6.2`, and Swift 6.2 first
