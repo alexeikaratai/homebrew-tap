@@ -1,6 +1,6 @@
 cask "smarttype" do
-  version "0.3.3"
-  sha256 "3b06f4a93caaf42d479466e0df0c65ac6ae0d1c14ae4432ac9b9b56ff2268162"
+  version "0.3.4"
+  sha256 "b6c7b766f779b9a1ddcb5818fa8ade41a65ab3b8ea0d72baeaabcc2dce219841"
 
   url "https://github.com/alexeikaratai/smarttype/releases/download/v#{version}/SmartType-#{version}.zip"
   name "SmartType"
